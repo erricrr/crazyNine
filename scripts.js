@@ -3,13 +3,13 @@ function multiplyNumber() {
 	let firstNumber = parseInt(document.getElementById("userNum").value);
 	const secondNumber = 9;
 	let result = firstNumber * secondNumber;
-	document.getElementById("numResult").value = result;
+	document.getElementById("numResult").textContent = result;
 }
 
 //Sum digits to 9
 function sumOfDigits() {
 	
-	let n = parseInt(document.getElementById("numResult").value);
+	let n = parseInt(document.getElementById("numResult").textContent);
   
 	const sumtAllDigits = (n) => {
 		let numArr = n.toString().split('');
@@ -18,14 +18,14 @@ function sumOfDigits() {
 
 	}
 
-	document.getElementById("sumResult").value = sumtAllDigits(n);
+	document.getElementById("sumResult").textContent = sumtAllDigits(n);
 } 
 
 //Tree the long way...
 function treeResult()
 {
 
-	let n = parseInt(document.getElementById("numResult").value); //Read input number digits
+	let n = parseInt(document.getElementById("numResult").textContent); //Read input number digits
 	let arr = n.toString().split("").map(Number); //Split digits to create a number array
 	const arr1 = [...arr]; //Saving array in a new vaiable using spread operator
 
@@ -248,8 +248,8 @@ function sumOfDigits() {
 //Reset button function
 function reset() {
 	document.getElementById("userNum").value = "0";
-	document.getElementById("numResult").value = "0";
-	document.getElementById("sumResult").value = "0";
+	document.getElementById("numResult").textContent = "0";
+	document.getElementById("sumResult").textContent = "0";
 	document.getElementById("tree").innerHTML = "0";
 	//document.getElementById("treeResult").value = "0";
 

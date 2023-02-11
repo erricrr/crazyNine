@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+
+    <title>Crazy 9</title>
+</head>
+<body>
+
+    <h1>Crazy 9&hellip;</h1>
+  <div class="container">
+   Enter a number from 1&ndash;999999999: 
+   <input type="text" id="userNum" name="userNum" pattern="^[1-9]\d*$" maxlength="9" size="14" oninput="validity.valid||(value='')"> &times; 9 
+   <button onclick="multiplyNumber()">=</button> 
+   <input id="numResult" name="numResult" value="0" disabled>
+
+    <br> 
+    <button style="margin-top: 1rem;" onclick="sumOfDigits()">Sum of Digits</button>
+   = <input id="sumResult" name="sumResult" value="0" disabled>
+   <br>
+   <button style="margin-top: 1rem;" onclick="treeResult()">Summation Tree</button>
+  <br>
+  <!-- <input id="treeResult" name="treeResult" value="0" disabled>-->
+   <div style="margin-top: 1rem;" class="sumUp" id="tree"></div>
+   <br>
+   <button style="margin-top: 1rem;" onclick="reset()">Reset</button>
+  </div>
+
+    <script type="text/javascript" src="scripts.js">
+</script>
+
+</body>
+</html>

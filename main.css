@@ -1,9 +1,9 @@
 :root {
-  --crazy-color5: #191514;
-  --crazy-color2: #8e7fb1;
-  --crazy-color1: #dd5136;
-  --crazy-color3: #6b789a;
-  --crazy-color4: #fffbf7;
+  --crazy-color2: #62D1DE;
+  --crazy-color5: #2B2259;
+  --crazy-color4: #FF8A29;
+  --crazy-color3: #FDE63D;
+  --crazy-color1: #FEFF69;
 }
 
 /*
@@ -63,8 +63,8 @@
   }
   
 button {
-  color: var(--crazy-color2);
-    background-color: var(--crazy-color5);
+  color: var(--crazy-color5);
+  background-color: var(--crazy-color3);
     border-radius: 0.25rem;
     border: none;
 }

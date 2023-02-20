@@ -12,23 +12,28 @@
 
     <h1>Crazy 9&hellip;</h1>
   <div class="container">
-   Enter a number from 1&ndash;999999999: 
-   <input type="text" id="userNum" name="userNum" pattern="^[1-9]\d*$" maxlength="9" size="14" oninput="validity.valid||(value='')"> &times; 9 
-   <button onclick="multiplyNumber()">=</button> 
-   <span id="numResult" name="numResult">0</span>
-
+Enter a number from 1&ndash;999999999: 
+<input type="text" id="userNum" pattern="^[1-9]\d*$" oninput="validity.valid||(value='')" name="userNum">&times; 9
+<!-- maxlength="9" size="14" -->
+<!--<button onclick="equalbtton()">=</button> -->
+<button onclick="timesNine()">=</button> 
+   <span id="numResult" name="numResult">?</span>
     <br> 
     <button style="margin-top: 1rem;" onclick="sumOfDigits()">Sum of Digits</button>
-   = <span id="sumResult" name="sumResult">0</span>
-   <br>
-   <button style="margin-top: 1rem;" onclick="treeResult()">Summation Tree</button>
-  <br>
-  <!-- <input id="treeResult" name="treeResult" value="0" disabled>-->
-   <div style="margin-top: 1rem;" class="sumUp" id="tree"></div>
-   <br>
-   <button style="margin-top: 1rem;" onclick="reset()">Reset</button>
-  </div>
+   = <span id="sumResult" name="sumResult" value="0">?</span>
+<br>
+   <!-- <button style="margin-top: 1rem;" onclick="nineNumberFun()">Try Me 1</button>
+     <p style="margin-top: 1rem;" class="sumUp" id="tree2"></p> -->
+  <button style="margin-top: 1rem;" id="myButton" onclick="treeResult4()">View Sums</button>
+<br>
+<p style="margin-top: 1rem;" id="tree3"></p>
+  <p id="tree3-1"></p>
+  <p id="tree4"></p>
 
+<br>
+<button style="margin-top: 1rem;" onclick="reset()">Reset</button>
+  </div>
+ 
     <script type="text/javascript" src="scripts.js">
 </script>
 

@@ -20,6 +20,12 @@ let limitOneClick = document.getElementById("myButton")
 function timesNine() { 
 	let userNumber = parseInt(numInput.value)
 	nineNumber = userNumber * 9
+
+	//sumDigits.textContent = "?"
+	//treeBranch3.textContent = " "
+	//treeBranch31.textContent = " "
+	//treeBranch4.textContent = "?"
+	//limitOneClick.disabled = false
 	
 	//console.log("nineNumber Inside the function timesNine" + " = " + nineNumber);
 	//console.log("nineNumber Inside the function timesNine" + " = " + typeof nineNumber);
@@ -30,11 +36,7 @@ function timesNine() {
 //Summing digits variable: sumOneDigit
 function sumOfDigits() {
 	let sumOneDigit = timesNine() % 9 || 9; // Casting out nines
-	/*while (isNaN(nineNumber)) {
-		return 0
-	}*/
-	//console.log("nineNumber Inside the function timesNine" + " = " + nineNumber);
-	//console.log("nineNumber Inside the function timesNine" + " = " + typeof nineNumber);
+
 	return sumDigits.textContent = sumOneDigit
 }
 
@@ -105,7 +107,6 @@ function reset() {
 	numInput.value = " "
 	usernumTimesNine.textContent = "?"
 	sumDigits.textContent = "?"
-	//treeBranch1.textContent = " "
 	treeBranch3.textContent = " "
 	treeBranch31.textContent = " "
 	treeBranch4.textContent = "?"

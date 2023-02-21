@@ -11,7 +11,41 @@ let treeBranch31 = document.getElementById("tree3-1")
 let treeBranch4 = document.getElementById("tree4")
 //let treeBranch5 = document.getElementById("tree5")
 
-let limitOneClick = document.getElementById("myButton")
+
+const firstButton = document.getElementById("firstButton")
+const sumButton = document.getElementById("sumButton")
+const magicButton = document.querySelector(".magicButton")
+
+const limitOneClick = document.getElementById("magicButton")
+
+
+let treeOutput = document.querySelector(".treeOutput")
+
+
+
+
+
+	
+//Trigger Button Click on Enter
+numInput.addEventListener("keypress", function(event) {
+	if (event.key === "Enter") {
+	  event.preventDefault();
+	  firstButton.click();
+	}
+  });
+
+
+ //Activate button after Input 
+ 	function actButton() {
+		if(typeof numInput=="undefined") { 
+			sumButton.disabled = true; 
+			magicButton.disabled = true; 
+		} else { 
+			sumButton.disabled = false;
+			magicButton.disabled = false;
+		}
+	}
+
 
 
 //Equal button user input number times nine
@@ -21,11 +55,14 @@ function timesNine() {
 	let userNumber = parseInt(numInput.value)
 	nineNumber = userNumber * 9
 
+
 	//sumDigits.textContent = "?"
 	//treeBranch3.textContent = " "
 	//treeBranch31.textContent = " "
 	//treeBranch4.textContent = "?"
-	//limitOneClick.disabled = false
+	
+
+
 	
 	//console.log("nineNumber Inside the function timesNine" + " = " + nineNumber);
 	//console.log("nineNumber Inside the function timesNine" + " = " + typeof nineNumber);
@@ -56,7 +93,6 @@ function treeResult1() {
 let slicePart = []
 
 function treeResult3(n) {
-
 
 		let sum = n[0] + n[1]
 		slicePart = n.slice(2, 100)
@@ -95,9 +131,8 @@ while(slicePart.length > 1) {
 
 function treeResult4() {
 
+	numArr = numString()
 	treeResult1()
-
-numArr = numString()
 	treeResult3(numArr)
 
 limitOneClick.disabled = true
@@ -107,6 +142,7 @@ function reset() {
 	numInput.value = " "
 	usernumTimesNine.textContent = "?"
 	sumDigits.textContent = "?"
+	//treeOutput.textContent = " "
 	treeBranch3.textContent = " "
 	treeBranch31.textContent = " "
 	treeBranch4.textContent = "?"

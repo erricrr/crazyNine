@@ -6,33 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
 
-    <title>Crazy 9</title>
+    <title>Crazy Nine</title>
 </head>
 <body>
 
-    <h1>Crazy 9&hellip;</h1>
+    <h1>Crazy Nine&hellip;</h1>
   <div class="container">
-Enter a number from 1&ndash;999999999: 
-<input type="text" class="box" id="userNum" maxlength="9" size="14" pattern="^[1-9]\d*$" oninput="validity.valid||(value='')" name="userNum">&times; 9
-<!-- maxlength="9" size="14" -->
-<!--<button onclick="equalbtton()">=</button> -->
-<button id="firstButton" onclick="timesNine()" disabled>=</button> 
-   <span id="numResult" name="numResult"></span>
-    <br> 
-    <button id="sumButton" style="margin-top: 1rem;" onclick="sumOfDigits()" disabled>Sum of Digits</button>
-   = <span id="sumResult" name="sumResult" value="0"></span>
-<br>
-   <!-- <button style="margin-top: 1rem;" onclick="nineNumberFun()">Try Me 1</button>
-     <p style="margin-top: 1rem;" class="sumUp" id="tree2"></p> -->
-  <button class="magicButton" style="margin-top: 1rem;" id="magicButton" onclick="treeResult4()" disabled>View Sums</button>
+<div class="section1">
+  <p class="info">Take a number and multiply it by nine.</p>
+  
+<div class="inputGroup">
+  <input type="text" name="userNum" class="box" id="userNum" maxlength="9" size="17" pattern="^[1-9]\d*$" oninput="validity.valid||(value='')" placeholder="Enter a number">&times; 9
+  <button id="firstButton" onclick="timesNine()" disabled>=</button> 
+  <!--<label for="userNum">Enter a number</label>-->
+  <span id="numResult" name="numResult"></span>
+</div>
+</div>
+<div class="section2">
+<p class="info">Add the individual digits of the resulting product.</p>
+    <br>Sum of Digits
+    <button id="sumButton" style="margin-top: 1rem;" onclick="sumOfDigits()" disabled>=</button>
+    <span id="sumResult" name="sumResult" value="0"></span>
+</div>
+
+  <div class="section3">
+    <p class="info">Keep summing the digits until you get a one-digit number.</p>
+    <button class="magicButton" style="margin-top: 1rem;" id="magicButton" onclick="treeResult4()" disabled>View Sums</button>
 <br>
 <p class="treeOutput" style="margin-top: 1rem;" id="tree3"></p>
   <p class="treeOutput" id="tree3-1"></p>
   <p class="treeOutput" id="tree4"></p>
-
+<p class="info">The result will allways add up to nine.</p>
 <br>
-<button style="margin-top: 1rem;" onclick="reset()">Reset</button>
+<button id="resetBtn" style="margin-top: 1rem;" onclick="reset()" disabled>Reset</button>
   </div>
+  </div>
+  
  
     <script type="text/javascript" src="scripts.js">
 </script>

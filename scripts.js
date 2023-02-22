@@ -4,12 +4,9 @@ let usernumTimesNine = document.getElementById("numResult")
 
 let sumDigits = document.getElementById("sumResult")
 
-//let treeBranch1 = document.getElementById("tree1")
-//let treeBranch2 = document.getElementById("tree2")
 let treeBranch3 = document.getElementById("tree3")
 let treeBranch31 = document.getElementById("tree3-1")
 let treeBranch4 = document.getElementById("tree4")
-//let treeBranch5 = document.getElementById("tree5")
 
 let inputBox = document.querySelector(".box")
 
@@ -18,7 +15,7 @@ const sumButton = document.getElementById("sumButton")
 const magicButton = document.querySelector(".magicButton")
 
 const limitOneClick = document.getElementById("magicButton")
-
+const resetBtn = document.getElementById("resetBtn")
 
 let treeOutput = document.querySelector(".treeOutput")
 
@@ -45,12 +42,13 @@ numInput.addEventListener("keypress", function(event) {
 function timesNine() { 
 	let userNumber = parseInt(numInput.value)
 	nineNumber = userNumber * 9
+	
+			inputBox.disabled = true;
+			firstButton.disabled = true; 
 
 			sumButton.disabled = false; 
 			magicButton.disabled = false; 
-			firstButton.disabled = true; 
-
-			inputBox.disabled = true;
+			resetBtn.disabled = false; 
 
 	return usernumTimesNine.textContent = nineNumber
 
@@ -61,6 +59,7 @@ function sumOfDigits() {
 	let userNumber = parseInt(numInput.value)
 	nineNumber = userNumber * 9
 	let sumOneDigit = nineNumber % 9 || 9; // Casting out nines
+	sumButton.disabled = true; 
 
 	return sumDigits.textContent = sumOneDigit
 }
@@ -144,7 +143,10 @@ function reset() {
 	sumButton.disabled = true
 	magicButton.disabled = true
 	
-	inputBox.disabled = false;
+	inputBox.disabled = false
+
+	resetBtn.disabled = true
+
 
 	//limitOneClick.disabled = true
 	//firstButton.disabled = true; 

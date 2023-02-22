@@ -4,6 +4,7 @@
   --crazy-color5: #FF8A29;
   --crazy-color1: #FDE63D;
   --crazy-color3: #FEFF69;
+  --crazy-colorDis: #e0e0e5;
 }
 
 /*
@@ -64,7 +65,7 @@
   
 button {
   color: var(--crazy-color2);
-  background-color: var(--crazy-color3);
+  background-color: var(--crazy-color4);
     border-radius: 0.25rem;
     border: none;
 }
@@ -92,9 +93,46 @@ h1 {
     padding: 30px;
 }
 
+
+
 input {
     margin: 5px;
+    background-color: var(--crazy-color4);
 }
+
+input[type=text]:disabled {
+  background: var(--crazy-colorDis);
+  transform: none;
+  box-shadow: none;
+}
+
+button:disabled  {
+  background: var(--crazy-colorDis);
+  cursor: pointer;
+}
+
+
+
+button:enabled:hover {
+   background-color: var(--crazy-color4);
+  transform: scale(1.1);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+button {
+  cursor: pointer;
+  margin: 5px;
+  padding: 0 5px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+input:hover {
+  background-color: var(--crazy-color4);
+  transform: scale(1.1);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+  }
+
+
 
 textarea:focus, input:focus{
   outline: none;
@@ -121,18 +159,12 @@ textarea:focus, input:focus{
 }
 
 
-button {
-  margin: 5px;
-  padding: 0 5px;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-}
 
-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
-  }
+
 
 
 .container {
   font-size: 1em;
 }
+
+/*TUTORIAL*/

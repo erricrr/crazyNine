@@ -13,14 +13,14 @@
     <h1>Crazy 9&hellip;</h1>
   <div class="container">
 Enter a number from 1&ndash;999999999: 
-<input onkeyup="actButton()" type="text" class="box" id="userNum" maxlength="9" size="14" pattern="^[1-9]\d*$" oninput="validity.valid||(value='')" name="userNum">&times; 9
+<input type="text" class="box" id="userNum" maxlength="9" size="14" pattern="^[1-9]\d*$" oninput="validity.valid||(value='')" name="userNum">&times; 9
 <!-- maxlength="9" size="14" -->
 <!--<button onclick="equalbtton()">=</button> -->
-<button id="firstButton" onclick="timesNine()">=</button> 
-   <span id="numResult" name="numResult">?</span>
+<button id="firstButton" onclick="timesNine()" disabled>=</button> 
+   <span id="numResult" name="numResult"></span>
     <br> 
     <button id="sumButton" style="margin-top: 1rem;" onclick="sumOfDigits()" disabled>Sum of Digits</button>
-   = <span id="sumResult" name="sumResult" value="0">?</span>
+   = <span id="sumResult" name="sumResult" value="0"></span>
 <br>
    <!-- <button style="margin-top: 1rem;" onclick="nineNumberFun()">Try Me 1</button>
      <p style="margin-top: 1rem;" class="sumUp" id="tree2"></p> -->

@@ -350,12 +350,6 @@ textarea:focus, input:focus{
   
 @media only screen and (max-width: 768px) {
   .container {
-    background-color: var(--crazy-color5);
-    font-size: 1em;
-
-     display: grid;
-    gap: 1em;
-    height: 100vh;
      grid-template-columns: 2em 1fr 2em;
      grid-template-areas: 
      "... header  ..."

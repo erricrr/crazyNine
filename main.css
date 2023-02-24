@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@500&display=swap');
 :root {
-  --crazy-color4: #62D1DE;
+  --crazy-color3: #62D1DE;
   --crazy-color2: #2B2259;
   --crazy-color5: #FF8A29;
   --crazy-color1: #FDE63D;
-  --crazy-color3: #FEFF69;
   --crazy-colorDis: #e0e0e5;
+  --boxRadius: 5px;
+--shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+
+--font1: 'Amatic SC', cursive;
+--font2: 'Public Sans', sans-serif;
+
 }
 
 /*
@@ -32,10 +39,11 @@
   */
   body {
     line-height: 1.5;
-    color: var(--crazy-color5);
+    color: var(--crazy-color2);
+    background-color: var(--crazy-color5);
+
 
     -webkit-font-smoothing: antialiased;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   /*
     6. Improve media defaults
@@ -63,41 +71,189 @@
     isolation: isolate;
   }
   
+  /*.container:before {
+    position: absolute;
+    content: 'Crazy Nine';
+    font-weight: 800;
+    z-index: -1;
+    font-size: 30rem;
+    top: -50px;
+    left: -10px;
+    color: var(--crazy-color2);
+    background-color: var(--crazy-color5);
+    font-family: var(--font1);
+
+  }
+*/
+
+a:link {
+  color: var(--crazy-color2);
+  font-display: none;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--crazy-color3);
+}
+
+.container {
+  font-family: var(--font2);
+  text-align: center;
+  font-size: 1.2em;
+
+  display: grid;
+  gap: 1em;
+  height: 100vh;
+   grid-template-columns: 2em 1fr 1fr 2em;
+   grid-template-areas: 
+   "... header header ..."
+   "... startTop sumNine ... "
+   "... tree tree ... "
+   "... tree tree ..."
+   "...  buttonReset buttonReset ..."
+   "footer footer footer footer"
+   ;
+
+
+}
+
+header {
+  color: var(--crazy-color2);
+  grid-area: header;
+  padding-top: 0.5em;
+  font-family: var(--font1);
+  font-size: 3rem;
+  min-width: 350px;
+
+}
+
+footer {
+  color: var(--crazy-color2);
+  background-color: var(--crazy-color5);
+text-align: center;
+  grid-area: footer;
+
+}
+
+.section-1 {   
+    grid-area: startTop;
+    border-radius: var(--boxRadius);
+   display: grid;
+   grid-template-columns: auto 20em;
+   grid-template-areas: 
+   "info1 inputNum"
+   ;
+   align-items: center;
+   background-color: var(--crazy-color2);
+   border-radius: var(--boxRadius);
+   padding: 20px;
+
+  }
+
+
+.info {
+  color: var(--crazy-color5); 
+ padding-bottom: 1em;
+
+}
+
+.inputGroup {
+  grid-area: inputNum;
+  font-size: 1rem;
+
+}
+
+.info1 {
+  grid-area: info1;
+}
+
+.section-2 {
+    border-radius: var(--boxRadius);
+    grid-area: sumNine;
+
+    display: grid;
+    grid-template-columns: 16em auto;
+    grid-template-areas: 
+    "sumfunc info2";
+    align-items: center;
+    background-color: var(--crazy-color2);
+    border-radius: var(--boxRadius);
+    padding: 20px;
+
+    
+}
+
+.info2 {
+  grid-area: info2;
+}
+.sumDigi {
+  grid-area: sumfunc;
+  font-size: 1rem;
+}
+
+
+.reset {
+    grid-area: buttonReset;
+    border-radius: var(--boxRadius);
+    justify-self: center;
+   
+
+}
+
+.section-3 {
+    grid-area: tree;
+    border-radius: var(--boxRadius);
+
+    display: grid;
+    grid-template-columns: 2em repeat(3, 1fr) 2em;
+    grid-template-areas: 
+    ". info3 sumTree info4 .";
+    align-items: start;
+    background-color: var(--crazy-color2);
+    padding: 20px;
+justify-self: center;
+
+}
+.info3 {
+  grid-area: info3;
+
+}
+.info4 {
+  grid-area: info4;
+
+}
+
+.treeOnly {
+  padding-top: 2rem;
+}
+
+.section-4 {
+  text-align: center;
+  grid-area: sumTree;
+  font-size: 1rem;
+
+
+}
+
+[class^="section-"] {
+  color: var(--crazy-color1);
+}
+
+
 button {
   color: var(--crazy-color2);
-  background-color: var(--crazy-color4);
+  background-color: var(--crazy-color1);
     border-radius: 0.25rem;
     border: none;
 }
 
 input {
-  color: var(--crazy-color2);
     background-color: var(--crazy-color3);
     border-radius: 0.25rem;
     border: none;
     text-align: center;
-}
-
-
-
-h1 {
-    color: var(--crazy-color2);
-    background-color: var(--crazy-color5);
-
-    padding: 25px;
-  }
-
-.container {
-   text-align: center;
-   background-color: var(--crazy-color2);
-    padding: 30px;
-}
-
-
-
-input {
-    margin: 5px;
-    background-color: var(--crazy-color4);
+    margin: 5px 10px;
+    background-color: var(--crazy-color1);
 }
 
 input[type=text]:disabled {
@@ -108,13 +264,13 @@ input[type=text]:disabled {
 
 button:disabled  {
   background: var(--crazy-colorDis);
-  cursor: pointer;
+  cursor: default;
 }
 
 
 
 button:enabled:hover {
-   background-color: var(--crazy-color4);
+   background-color: var(--crazy-color1);
   transform: scale(1.1);
   box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
 }
@@ -127,7 +283,7 @@ button {
 }
 
 input:hover {
-  background-color: var(--crazy-color4);
+  background-color: var(--crazy-color1);
   transform: scale(1.1);
   box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
   }
@@ -159,12 +315,76 @@ textarea:focus, input:focus{
 }
 
 
+/*media Qs*/
+
+@media only screen and (max-width: 1200px) {
+
+  .section-1 {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "inputNum"
+    "info1"
+    ;
+  }
+
+  .section-2 {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "info2"
+    "sumfunc"
+  }
+
+  .section-3 {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "info3" 
+    "sumTree"
+    "info4";
+  }
+
+}
+  
+@media only screen and (max-width: 768px) {
+  .container {
+    background-color: var(--crazy-color5);
+    font-size: 1em;
+
+     display: grid;
+    gap: 1em;
+    height: 100vh;
+     grid-template-columns: 2em 1fr 2em;
+     grid-template-areas: 
+     "... header  ..."
+     "... startTop  ... "
+     "... sumNine  ... "
+     "... tree  ..."
+     "...  tree  ..."
+     "...   buttonReset ..."
+     "footer footer footer"
+     ;
+     text-align: center;
+  }
 
 
 
-
-.container {
-  font-size: 1em;
 }
 
-/*TUTORIAL*/
+@media only screen and (max-width: 480px) {
+  .section-1 {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "info1"
+    "inputNum"
+    ;
+  }
+
+  .section-2 {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "sumfunc"
+    "info2"
+  }
+
+
+
+}

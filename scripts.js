@@ -4,6 +4,8 @@ let usernumTimesNine = document.getElementById("numResult")
 
 let sumDigits = document.getElementById("sumResult")
 
+let treeBranch1 = document.getElementById("tree1")
+
 let treeBranch3 = document.getElementById("tree3")
 let treeBranch31 = document.getElementById("tree3-1")
 let treeBranch4 = document.getElementById("tree4")
@@ -59,10 +61,15 @@ function sumOfDigits() {
 	let userNumber = parseInt(numInput.value)
 	nineNumber = userNumber * 9
 	let sumOneDigit = nineNumber % 9 || 9; // Casting out nines
-	sumButton.disabled = true; 
 
-	return sumDigits.textContent = sumOneDigit
+	let joinArray = numString().join(" + ") // .split vs .join ???
+
+	sumButton.disabled = true; 
+	
+	treeBranch1.textContent = joinArray
+	sumDigits.textContent =  sumOneDigit
 }
+
 
 
 //To string for resuse variable: numArr
@@ -83,7 +90,7 @@ function treeResult1() {
 let slicePart = []
 
 function treeResult3(n) {
-	treeResult1()
+	//treeResult1()
 
 		let sum = n[0] + n[1]
 		slicePart = n.slice(2, 100)
@@ -135,6 +142,7 @@ function reset() {
 	usernumTimesNine.textContent = " "
 	sumDigits.textContent = " "
 	//treeOutput.textContent = " "
+	treeBranch1.textContent = " "
 	treeBranch3.textContent = " "
 	treeBranch31.textContent = " "
 	treeBranch4.textContent = " "

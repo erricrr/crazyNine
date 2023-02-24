@@ -9,37 +9,52 @@
     <title>Crazy Nine</title>
 </head>
 <body>
-
-    <h1>Crazy Nine&hellip;</h1>
   <div class="container">
-<div class="section1">
-  <p class="info">Take a number and multiply it by nine.</p>
-  
+    <header><h1>Crazy Nine&hellip;</h1></header>
+<div class="section-1">
+  <div class="info info1">
+    <p>Enter a number to multiply by nine.</p>
+  </div>
 <div class="inputGroup">
   <input type="text" name="userNum" class="box" id="userNum" maxlength="9" size="17" pattern="^[1-9]\d*$" oninput="validity.valid||(value='')" placeholder="Enter a number">&times; 9
-  <button id="firstButton" onclick="timesNine()" disabled>=</button> 
-  <!--<label for="userNum">Enter a number</label>-->
-  <span id="numResult" name="numResult"></span>
+    <button id="firstButton" onclick="timesNine()" disabled>=</button> 
+    <!--<label for="userNum">Enter a number</label>-->
+    <span id="numResult" name="numResult"></span>
 </div>
 </div>
-<div class="section2">
-<p class="info">Add the individual digits of the resulting product.</p>
-    <br>Sum of Digits
-    <button id="sumButton" style="margin-top: 1rem;" onclick="sumOfDigits()" disabled>=</button>
-    <span id="sumResult" name="sumResult" value="0"></span>
+<div class="section-2">
+  <div class="info info2">
+<p>Add the individual digits of the resulting product.</p>
+</div>
+<div class="sumDigi">
+  <p id="tree1"></p>
+    <p><span>Sum of Digits</span>
+      <button id="sumButton" onclick="sumOfDigits()" disabled>=</button>
+      <span id="sumResult" name="sumResult" value="0"></span></p>
+</div>
 </div>
 
-  <div class="section3">
-    <p class="info">Keep summing the digits until you get a one-digit number.</p>
-    <button class="magicButton" style="margin-top: 1rem;" id="magicButton" onclick="treeResult4()" disabled>View Sums</button>
-<br>
-<p class="treeOutput" style="margin-top: 1rem;" id="tree3"></p>
-  <p class="treeOutput" id="tree3-1"></p>
-  <p class="treeOutput" id="tree4"></p>
-<p class="info">The result will allways add up to nine.</p>
-<br>
-<button id="resetBtn" style="margin-top: 1rem;" onclick="reset()" disabled>Reset</button>
+  <div class="section-3">
+    <div class="info info3">
+      <p>Keep summing the digits until you get a one-digit number.</p>
+    </div>
+
+<div class="section-4">
+  <button class="magicButton" id="magicButton" onclick="treeResult4()" disabled>View Sums</button>
+<div class="treeOnly">
+  <p id="tree3"></p>
+  <p id="tree3-1"></p>
+  <p id="tree4"></p>
+</div>
   </div>
+  <div class="info info4">
+<p>The digits will allways add up to nine.</p>
+  </div>
+</div>
+<div class="reset">
+  <button id="resetBtn" onclick="reset()" disabled>Reset</button>
+</div>  
+<footer>Inspired by <a href="https://youtu.be/Q53GmMCqmAM" target="_blank">Square One: Nine Nine Nine</a></footer>
   </div>
   
  

@@ -256,9 +256,11 @@ input {
 }
 
 input[type=text]:disabled {
-  background: var(--crazy-colorDis);
+  background-color: var(--crazy-color2);
   transform: none;
   box-shadow: none;
+  outline: 1px inset var(--crazy-color1);
+  color: var(--crazy-color1);
 }
 
 button:disabled  {

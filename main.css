@@ -104,11 +104,12 @@ a:hover {
 .container {
   font-family: var(--font2);
   text-align: center;
+  font-size: 1.2rem;
 
   display: grid;
   gap: 1em;
   height: 100vh;
-   grid-template-columns: 3em 1fr 1fr 3em;
+   grid-template-columns: 1.5em 1fr 1fr 1.5em;
    grid-template-areas: 
    "... header header ..."
    "... startTop sumNine ... "
@@ -120,6 +121,7 @@ a:hover {
    justify-content: center;
 
 }
+
 
 
 header {
@@ -151,13 +153,18 @@ text-align: center;
 
 
    display: grid;
-   grid-template-columns: auto 20em;
+   grid-template-columns: 1fr;
    grid-template-areas: 
-   "info1 inputNum"
-   ;
+   "inputNum"
+   "info1";
+
    align-items: center;
    background-color: var(--crazy-color2);
    border-radius: var(--boxRadius);
+
+
+  
+   
   }
 
 
@@ -185,9 +192,10 @@ text-align: center;
 
 
     display: grid;
-    grid-template-columns: 16em auto;
+     grid-template-columns: 1fr;
     grid-template-areas: 
-    "sumfunc info2";
+    "info2"
+    "sumfunc";
     
     background-color: var(--crazy-color2);
     border-radius: var(--boxRadius);
@@ -216,9 +224,11 @@ text-align: center;
     padding: var(--paddingInfo);
 
     display: grid;
-    grid-template-columns: 3em repeat(3, 1fr) 3em;
+    grid-template-columns: 1fr;
     grid-template-areas: 
-    ". info3 sumTree info4 .";
+    "info3" 
+    "sumTree"
+    "info4";
     align-items: center;
     background-color: var(--crazy-color2);
 
@@ -334,7 +344,8 @@ textarea:focus, input:focus{
 
 /*media Qs*/
 
-@media only screen and (max-width: 1200px) {
+/*@media only screen and (max-width: 1200px) {
+
 
   .section-1 {
     grid-template-columns: 1fr;
@@ -359,11 +370,12 @@ textarea:focus, input:focus{
     "info4";
   }
 
-}
+}*/
   
 @media only screen and (max-width: 768px) {
+
   .container {
-    grid-template-columns: 3em 1fr 3em;
+    grid-template-columns: 1.5em 1fr 1.5em;
 
      grid-template-areas: 
      "... header  ..."
@@ -390,5 +402,11 @@ textarea:focus, input:focus{
     grid-template-areas: 
     "sumfunc"
     "info2"
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    font-size: 1.1rem;
   }
 }

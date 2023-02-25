@@ -144,7 +144,6 @@ text-align: center;
     justify-self: end;
 
     max-width: 600px;
-
    display: grid;
    grid-template-columns: 1fr;
    grid-template-areas: 
@@ -159,7 +158,6 @@ text-align: center;
 
 .info {
   color: var(--crazy-color5); 
-  padding: var(--paddingInfo);
 
 }
 
@@ -171,6 +169,8 @@ text-align: center;
 
 .info1 {
   grid-area: info1;
+  margin-top: -100px;
+  padding-right: 20px;
 }
 
 .section-2 {
@@ -186,6 +186,7 @@ text-align: center;
      grid-template-columns: 1fr;
     grid-template-areas: 
     "info2"
+    "info3"
     "sumfunc";
     
     background-color: var(--crazy-color2);
@@ -196,9 +197,14 @@ text-align: center;
 
 .info2 {
   grid-area: info2;
+  padding: var(--paddingInfo);
 }
 .sumDigi {
   grid-area: sumfunc;
+}
+
+#digitsBtn {
+  padding-bottom: 17px;
 }
 
 
@@ -219,19 +225,20 @@ text-align: center;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 
-    "info3" 
-    "sumTree"
-    "info4";
+    "info4"
+    "sumTree";
     
     background-color: var(--crazy-color2);
 
 }
 .info3 {
   grid-area: info3;
+  padding: var(--paddingInfo);
 
 }
 .info4 {
   grid-area: info4;
+  padding: var(--paddingInfo);
 
 }
 
@@ -339,7 +346,7 @@ textarea:focus, input:focus{
 
 /*media Qs*/
   
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 857px) {
 
   .container:before {
     top: -29px;
@@ -371,11 +378,16 @@ textarea:focus, input:focus{
   .section-2 {
     grid-template-columns: 1fr;
     grid-template-areas: 
+    "info2"
     "sumfunc"
-    "info2";
+    "info4";
     justify-self: center;
     margin-top: 0;
 
+  }
+  .info1 {
+    padding: 15px;
+    margin-top: 0;
   }
 }
 

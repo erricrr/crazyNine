@@ -81,7 +81,7 @@
     content: 'Crazy #9';
     z-index: -1;
 
-    top: -9px;
+    top: -75px;
     left: 40px;
 
     color: var(--crazy-color2);
@@ -341,6 +341,9 @@ textarea:focus, input:focus{
   
 @media only screen and (max-width: 768px) {
 
+  .container:before {
+    top: -29px;
+  }
   .container {
     grid-template-columns: 1.5em 1fr 1.5em;
 

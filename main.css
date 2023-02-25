@@ -90,14 +90,6 @@
   }
 
 
-  header {
-    color: var(--crazy-color5);
-    grid-area: header;
-    font-family: var(--font1);
-    font-size: 3rem;
-    min-width: 350px;
-    z-index: -2;
-  }
 
 
 a:link {
@@ -114,6 +106,7 @@ a:hover {
   font-family: var(--font2);
   text-align: center;
   font-size: 1.2rem;
+
 
   display: grid;
   gap: 1em;
@@ -143,7 +136,7 @@ text-align: center;
 }
 
 .section-1 {   
-
+  margin-top: 8em;
   padding: var(--paddingInfo);
     grid-area: startTop;
     border-radius: var(--boxRadius);
@@ -181,6 +174,7 @@ text-align: center;
 }
 
 .section-2 {
+  margin-top: 8em;
   padding: var(--paddingInfo);
     border-radius: var(--boxRadius);
     grid-area: sumNine;
@@ -364,8 +358,8 @@ textarea:focus, input:focus{
     grid-template-columns: 1fr;
     grid-template-areas: 
     "info1"
-    "inputNum"
-    ;
+    "inputNum";
+
     justify-self: center;
   }
 
@@ -375,6 +369,8 @@ textarea:focus, input:focus{
     "sumfunc"
     "info2";
     justify-self: center;
+    margin-top: 0;
+
   }
 }
 

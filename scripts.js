@@ -44,6 +44,10 @@ numInput.addEventListener("keypress", function(event) {
 function timesNine() { 
 	let userNumber = parseInt(numInput.value)
 	nineNumber = userNumber * 9
+
+	let joinArray = numString().join(" + ") // .split vs .join ???
+
+	treeBranch1.textContent = joinArray
 	
 			inputBox.disabled = true;
 			firstButton.disabled = true; 
@@ -52,7 +56,7 @@ function timesNine() {
 			magicButton.disabled = false; 
 			resetBtn.disabled = false; 
 
-	return usernumTimesNine.textContent = nineNumber
+	usernumTimesNine.textContent = nineNumber
 
 }
 
@@ -62,11 +66,9 @@ function sumOfDigits() {
 	nineNumber = userNumber * 9
 	let sumOneDigit = nineNumber % 9 || 9; // Casting out nines
 
-	let joinArray = numString().join(" + ") // .split vs .join ???
 
 	sumButton.disabled = true; 
 	
-	treeBranch1.textContent = joinArray
 	sumDigits.textContent =  sumOneDigit
 }
 

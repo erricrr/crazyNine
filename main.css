@@ -76,20 +76,29 @@
     isolation: isolate;
   }
   
-  /*.container:before {
+  .container:before {
     position: absolute;
-    content: 'Crazy Nine';
-    font-weight: 800;
+    content: 'Crazy #9';
     z-index: -1;
-    font-size: 30rem;
-    top: -50px;
-    left: -10px;
+    margin-left: 40px;
+  
+
     color: var(--crazy-color2);
     background-color: var(--crazy-color5);
     font-family: var(--font1);
-
+    font-size: 25vw;
   }
-*/
+
+
+  header {
+    color: var(--crazy-color5);
+    grid-area: header;
+    font-family: var(--font1);
+    font-size: 3rem;
+    min-width: 350px;
+    z-index: -2;
+  }
+
 
 a:link {
   color: var(--crazy-color2);
@@ -123,17 +132,6 @@ a:hover {
 }
 
 
-
-header {
-  color: var(--crazy-color2);
-  grid-area: header;
-  padding-top: 0.5em;
-  font-family: var(--font1);
-  font-size: 3rem;
-  min-width: 350px;
-
-}
-
 footer {
   padding: var(--paddingInfo);
 
@@ -162,9 +160,6 @@ text-align: center;
 
    background-color: var(--crazy-color2);
    border-radius: var(--boxRadius);
-
-
-  
    
   }
 
@@ -387,4 +382,6 @@ textarea:focus, input:focus{
   .container {
     font-size: 1.1rem;
   }
+
+  
 }

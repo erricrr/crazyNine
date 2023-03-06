@@ -135,8 +135,10 @@ function treeResult4() {
 	treeResult1()
 	treeResult3(numArr)
 
-	if(numArr[0] == 9){
-		return treeBranch31.innerHTML = "<br>" + "Don't be shy! Enter a larger number." 
+	if(numArr[0] == 9 && numArr.length == 1){
+		treeBranch31.innerHTML = " " 
+
+		treeBranch4.innerHTML = "<br>" + "Don't be shy! Enter a larger number." 
 	}
 	
 	//actButton()

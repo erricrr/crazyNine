@@ -170,7 +170,7 @@ text-align: center;
 .info1 {
   grid-area: info1;
   margin-top: -100px;
-  padding-right: 20px;
+  padding: 20px;
 }
 
 .section-2 {
@@ -209,7 +209,7 @@ text-align: center;
     grid-area: buttonReset;
     border-radius: var(--boxRadius);
     justify-self: center;
-   font-size: 1.5rem;
+   font-size: 1.25rem;
 }
 
 .section-3 {

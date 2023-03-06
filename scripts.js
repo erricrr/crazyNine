@@ -134,6 +134,10 @@ function treeResult4() {
 	numArr = numString()
 	treeResult1()
 	treeResult3(numArr)
+
+	if(numArr[0] == 9){
+		return treeBranch31.innerHTML = "<br>" + "Don't be shy! Enter a larger number." 
+	}
 	
 	//actButton()
 limitOneClick.disabled = true

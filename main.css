@@ -130,8 +130,10 @@ footer {
 
   color: var(--crazy-color2);
   background-color: var(--crazy-color5);
-text-align: center;
+  text-align: center;
   grid-area: footer;
+
+  font-size: 1rem;
 
 }
 
@@ -383,7 +385,7 @@ textarea:focus, input:focus{
 
 @media only screen and (max-width: 600px) {
   .container {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   

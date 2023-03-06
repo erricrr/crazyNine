@@ -384,7 +384,7 @@ textarea:focus, input:focus{
 }
 
 @media only screen and (max-width: 600px) {
-  .container {
+  .container, .reset {
     font-size: 1rem;
   }
 

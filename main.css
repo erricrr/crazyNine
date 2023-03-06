@@ -140,6 +140,7 @@ text-align: center;
   padding: var(--paddingInfo);
     grid-area: startTop;
     border-radius: var(--boxRadius);
+    background-color: var(--crazy-color2);
     align-items: center;
     justify-self: end;
 
@@ -150,8 +151,7 @@ text-align: center;
    "inputNum"
    "info1";
 
-   background-color: var(--crazy-color2);
-   border-radius: var(--boxRadius);
+   
    
   }
 
@@ -177,6 +177,7 @@ text-align: center;
   margin-top: 8em;
   padding: var(--paddingInfo);
     border-radius: var(--boxRadius);
+    background-color: var(--crazy-color2);
     grid-area: sumNine;
     align-items: center;
     justify-self: start;
@@ -188,11 +189,7 @@ text-align: center;
     "info2"
     "info3"
     "sumfunc";
-    
-    background-color: var(--crazy-color2);
-    border-radius: var(--boxRadius);
-  
-    
+     
 }
 
 .info2 {
@@ -218,6 +215,7 @@ text-align: center;
 .section-3 {
     grid-area: tree;
     border-radius: var(--boxRadius);
+    background-color: var(--crazy-color2);
     padding: var(--paddingInfo);
     align-items: center;
     justify-self: center;
@@ -227,8 +225,6 @@ text-align: center;
     grid-template-areas: 
     "info4"
     "sumTree";
-    
-    background-color: var(--crazy-color2);
 
 }
 .info3 {
@@ -270,6 +266,10 @@ button {
   background-color: var(--crazy-color1);
     border-radius: 0.25rem;
     border: none;
+    cursor: pointer;
+    margin: 5px;
+    padding: 0 5px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 button:disabled  {
@@ -277,8 +277,14 @@ button:disabled  {
   cursor: default;
 }
 
+button:enabled:hover {
+  background-color: var(--crazy-color1);
+ transform: scale(1.1);
+ box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+
 input {
-    background-color: var(--crazy-color3);
     border-radius: 0.25rem;
     border: none;
     text-align: center;
@@ -294,22 +300,6 @@ input[type=text]:disabled {
   color: var(--crazy-color1);
 }
 
-
-
-
-
-button:enabled:hover {
-   background-color: var(--crazy-color1);
-  transform: scale(1.1);
-  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
-}
-
-button {
-  cursor: pointer;
-  margin: 5px;
-  padding: 0 5px;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-}
 
 input:hover {
   background-color: var(--crazy-color1);

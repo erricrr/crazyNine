@@ -239,6 +239,25 @@ footer {
   margin-top: 1rem;
 }
 
+#arrowSum {
+  -webkit-animation: mover 0.5s infinite  alternate;
+  animation: mover 0.5s infinite  alternate;
+  font-family: var(--font1);
+  font-size: x-large;
+
+  margin-top: 10px;
+}
+
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+
 #firstButton {
   margin-bottom: 1rem;
 }

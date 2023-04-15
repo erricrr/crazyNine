@@ -18,6 +18,7 @@ const magicButton = document.querySelector(".magicButton")
 
 const limitOneClick = document.getElementById("magicButton")
 const resetBtn = document.getElementById("resetBtn")
+const arrowSum = document.getElementById("arrowSum")
 
 let treeOutput = document.querySelector(".treeOutput")
 
@@ -130,7 +131,7 @@ while(slicePart.length > 1) {
 	
 
 function treeResult4() {
-
+	arrowSum.innerHTML = "crazy #9"
 	numArr = numString()
 	treeResult1()
 	treeResult3(numArr)
@@ -154,6 +155,7 @@ function reset() {
 	treeBranch3.textContent = " "
 	treeBranch31.textContent = " "
 	treeBranch4.textContent = " "
+	arrowSum.innerHTML = " "
 
 	firstButton.disabled = true
 	sumButton.disabled = true

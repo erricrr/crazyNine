@@ -323,7 +323,7 @@ textarea:focus, input:focus{
 }
 
 #magicButton, #resetBtn {
-  padding: 0.4rem;
+  padding: 5px 10px;
 }
 
 

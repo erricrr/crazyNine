@@ -341,7 +341,12 @@ textarea:focus, input:focus{
 #numResult, #sumResult {
   background-color: var(--crazy-color2);
   text-align: left;
+ 
 
+}
+
+#numResult{
+  margin-left: 3px;
 }
 
 #tree1 {

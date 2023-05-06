@@ -76,11 +76,18 @@ function timesNine() {
 		
 		treeBranch1.textContent = "The resulting product is one digit so there's nothing to add here. But that's okay! Select 'Reset' and enter a number greater than one."
 
-	} else{
+	} else if (isNaN(nineNumber)) {
+		magicButton.disabled = true
+		usernumTimesNine.textContent = "Whoopsie!"
+
+		treeBranch1.textContent = "Not a number. But that's okay! Select 'Reset' and enter a number greater than one."
+	}
+		else{
 		let joinArray = numString().join(" + ") // .split vs .join ???
 		treeBranch1.textContent = joinArray
 
 		magicButton.disabled = false; 
+		usernumTimesNine.textContent = nineNumber
 
 	}
 			inputBox.disabled = true;
@@ -88,7 +95,6 @@ function timesNine() {
 			//sumButton.disabled = false; 
 			resetBtn.disabled = false; 
 
-	usernumTimesNine.textContent = nineNumber
 
 }
 

@@ -2,7 +2,7 @@
 let numInput = document.getElementById("userNum")
 let usernumTimesNine = document.getElementById("numResult")
 
-let sumDigits = document.getElementById("sumResult")
+//let sumDigits = document.getElementById("sumResult")
 
 let treeBranch1 = document.getElementById("tree1")
 
@@ -19,6 +19,9 @@ const magicButton = document.querySelector(".magicButton")
 const limitOneClick = document.getElementById("magicButton")
 const resetBtn = document.getElementById("resetBtn")
 const arrowSum = document.getElementById("arrowSum")
+const revealText = document.getElementById("revealText")
+
+const treeOnly = document.getElementsByClassName(".treeOnly")
 
 let treeOutput = document.querySelector(".treeOutput")
 
@@ -52,8 +55,7 @@ function timesNine() {
 	
 			inputBox.disabled = true;
 			firstButton.disabled = true; 
-
-			sumButton.disabled = false; 
+			//sumButton.disabled = false; 
 			magicButton.disabled = false; 
 			resetBtn.disabled = false; 
 
@@ -62,7 +64,7 @@ function timesNine() {
 }
 
 //Summing digits variable: sumOneDigit
-function sumOfDigits() {
+/*function sumOfDigits() {
 	let userNumber = parseInt(numInput.value)
 	nineNumber = userNumber * 9
 	let sumOneDigit = nineNumber % 9 || 9; // Casting out nines
@@ -71,7 +73,7 @@ function sumOfDigits() {
 	sumButton.disabled = true; 
 	
 	sumDigits.textContent =  sumOneDigit
-}
+}*/
 
 
 
@@ -132,15 +134,16 @@ while(slicePart.length > 1) {
 
 function treeResult4() {
 	arrowSum.innerHTML = "crazy #9"
+	revealText.innerHTML = "The digits will always add up to nine!"
 	numArr = numString()
 	treeResult1()
 	treeResult3(numArr)
 
-	if(numArr[0] == 9 && numArr.length == 1){
+	/*if(numArr[0] == 9 && numArr.length == 1){
 		treeBranch31.innerHTML = " " 
 
 		treeBranch4.innerHTML = "<br>" + "Don't be shy! Enter a larger number." 
-	}
+	}*/
 	
 	//actButton()
 limitOneClick.disabled = true
@@ -149,21 +152,24 @@ limitOneClick.disabled = true
 function reset() {
 	numInput.value = " "
 	usernumTimesNine.textContent = " "
-	sumDigits.textContent = " "
-	//treeOutput.textContent = " "
 	treeBranch1.textContent = " "
+
+	treeOnly.textContent = " "
+	//sumDigits.textContent = " "
+	//treeOutput.textContent = " "
+	
 	treeBranch3.textContent = " "
 	treeBranch31.textContent = " "
 	treeBranch4.textContent = " "
 	arrowSum.innerHTML = " "
-
+	revealText.innerHTML = " "
 	firstButton.disabled = true
-	sumButton.disabled = true
+	//sumButton.disabled = true
 	magicButton.disabled = true
 	
 	inputBox.disabled = false
 
-	resetBtn.disabled = true
+	
 
 
 	//limitOneClick.disabled = true

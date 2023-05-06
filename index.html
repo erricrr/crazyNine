@@ -19,7 +19,7 @@
   <div class="info info1">
     <p>Enter a number to multiply by nine.</p>
   </div>
-<div class="inputGroup">
+<div class="inputGroup"> 
   <input type="text" name="userNum" class="box" id="userNum" maxlength="9" size="12" pattern="^[1-9]\d*$" oninput="validity.valid||(value='')" placeholder="Type Here">
   <button id="firstButton" onclick="timesNine()" disabled>&times 9</button> = <span id="numResult" name="numResult"></span>
 </div>
@@ -28,21 +28,19 @@
   <div class="info info2">
 <p>Add the individual digits of the resulting product.</p>
 </div>
-<div class="sumDigi">
-  <p id="tree1"></p>
-  <div class="info info3">
-    <p>Keep summing the digits until you get a one-digit number.</p>
-  </div>
 
-    <p id="digitsBtn"><span>Sum of Digits</span>
+  <p class="sumDigi" id="tree1"></p>
+
+
+   <!-- <p id="digitsBtn"><span>Sum of Digits</span>
       <button id="sumButton" onclick="sumOfDigits()" disabled>=</button>
-      <span id="sumResult" name="sumResult" value="0"></span></p>
-</div>
+      <span id="sumResult" name="sumResult" value="0"></span></p>-->
+
 </div>
 
   <div class="section-3">
     <div class="info info4">
-      <p>The digits will allways add up to nine.</p>
+    <p>Keep summing the digits until you get a one-digit number.</p>
         </div>
   
 
@@ -53,11 +51,12 @@
   <p id="tree3-1"></p>
   <p id="tree4"></p>
   <p id="arrowSum"></p>
+  <p id="revealText" class="info info4"></p>
 </div>
   </div>
 </div>
 <div class="reset">
-  <button id="resetBtn" onclick="reset()" disabled>Reset</button>
+  <button id="resetBtn" onclick="reset()">Reset</button>
 </div>  
 <footer>Crazy Number Nine 2023<br>Inspired by <a href="https://youtu.be/Q53GmMCqmAM" target="_blank">Square One: Nine Nine Nine<span id="newWindow" role="img" aria-label="link opens in new window">&#10138;</span></a></footer>
   </div>

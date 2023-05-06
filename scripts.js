@@ -25,30 +25,44 @@ const treeOnly = document.getElementsByClassName(".treeOnly")
 
 let treeOutput = document.querySelector(".treeOutput")
 
-//Function for when input box is active
+
+//Function for when input box is active, must meet length requirement
 inputBox.addEventListener("input", function() {
-	firstButton.disabled = false
-	//timesNine()
+	if (numInput.value.length >= 1) {
+		firstButton.disabled = false
+	}
 });
 
 
 //Trigger Button Click on Enter
 numInput.addEventListener("keypress", function(event) {
+
 	if (event.key === "Enter") {
 	  event.preventDefault();
 	  firstButton.click();
 	}
+
   });
 
-  //Input Numbers ONLY no other key strokes allowed 
+  //Allow Input Numbers ONLY, no other key strokes 
   function onlyNumberKey(evt) {
-              
+
 	// Only ASCII character in that range allowed
 	var ASCIICode = (evt.which) ? evt.which : evt.keyCode
 	if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
 		return false;
 	return true;
 }
+
+//Disable Delete button 
+window.onkeydown = function (event) {
+	if (event.which == 8 || event.which == 46) { 
+		firstButton.disabled = true
+	   //event.preventDefault();   // turn off browser transition to the previous page 
+	   //alert("Enter any number.");
+	 }  
+}
+
 
 
 //Equal button user input number times nine

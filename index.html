@@ -20,7 +20,7 @@
     <p>Enter a number to multiply by nine.</p>
   </div>
 <div class="inputGroup"> 
-  <input type="text" name="userNum" class="box" id="userNum" maxlength="9" size="12" pattern="^[1-9]\d*$" onkeypress="return onlyNumberKey(event)" oninput="validity.valid||(value='')" placeholder="Type Here">
+  <input required type="text" name="userNum" class="box" id="userNum" maxlength="9" size="12" onkeypress="return onlyNumberKey(event)" placeholder="Type Here">
   <button id="firstButton" onclick="timesNine()" disabled>&times 9</button> = <span id="numResult" name="numResult"></span>
 </div>
 </div>

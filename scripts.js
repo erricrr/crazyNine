@@ -40,10 +40,18 @@ numInput.addEventListener("keypress", function(event) {
 	}
   });
 
+  //Input Numbers ONLY no other key strokes allowed 
+  function onlyNumberKey(evt) {
+              
+	// Only ASCII character in that range allowed
+	var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+	if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+		return false;
+	return true;
+}
 
 
 //Equal button user input number times nine
-//let nineNumber
 
 function timesNine() { 
 	let userNumber = parseInt(numInput.value)

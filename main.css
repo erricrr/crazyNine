@@ -317,6 +317,13 @@ input[type=text]:disabled {
   color: var(--crazy-color1);
 }
 
+/* input:invalid {
+  border: 4px solid var(--crazy-color3);
+}
+Input:invalid:focus {
+  background-image: linear-gradient(var(--crazy-color1) 55%, var(--crazy-color3));
+}
+*/
 
 input:hover {
   background-color: var(--crazy-color1);

@@ -71,14 +71,21 @@ function timesNine() {
 	let userNumber = parseInt(numInput.value)
 	nineNumber = userNumber * 9
 
-	let joinArray = numString().join(" + ") // .split vs .join ???
+	if(nineNumber == 9 || nineNumber == 0) {
+		magicButton.disabled = true
+		
+		treeBranch1.textContent = "The resulting product is one digit so there's nothing to add here, but that's okay! Enter a number greater than one."
 
-	treeBranch1.textContent = joinArray
-	
+	} else{
+		let joinArray = numString().join(" + ") // .split vs .join ???
+		treeBranch1.textContent = joinArray
+
+		magicButton.disabled = false; 
+
+	}
 			inputBox.disabled = true;
 			firstButton.disabled = true; 
 			//sumButton.disabled = false; 
-			magicButton.disabled = false; 
 			resetBtn.disabled = false; 
 
 	usernumTimesNine.textContent = nineNumber

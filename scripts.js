@@ -73,7 +73,8 @@ function timesNine() {
 
 	if(nineNumber == 9 || nineNumber == 0) {
 		magicButton.disabled = true
-		
+		usernumTimesNine.textContent = nineNumber
+
 		treeBranch1.textContent = "The resulting product is one digit so there's nothing to add here. But that's okay! Select 'Reset' and enter a number greater than one."
 
 	} else if (isNaN(nineNumber)) {

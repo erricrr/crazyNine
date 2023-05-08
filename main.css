@@ -366,6 +366,38 @@ textarea:focus, input:focus{
   padding: 5px 10px;
 }
 
+/*Tooltip*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted var(--crazy-color1);
+  color: var(--crazy-color1);
+
+  cursor: default;
+  font-size: medium;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: var(--crazy-color1);
+  color: var(--crazy-color2);
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+margin-left: 10px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+
+  top: 100%;  
+  left: 50%;  
+  margin-left: -100px; 
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 
 /*media Qs*/
   
@@ -407,6 +439,18 @@ textarea:focus, input:focus{
     grid-area: sumfunc;
     margin-bottom: -15px;
   }
+
+  .tooltip .tooltiptext {
+    width: 120px;
+    font-size: 0.7rem;  
+  }
+
+  .tooltip .tooltiptext {
+  
+    top: -350%;  
+    left: 50%;  
+  }
+
 }
 
 

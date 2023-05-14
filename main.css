@@ -81,15 +81,15 @@ html{
 
 
 
-
-a:link {
+.footerLink {
   color: var(--crazy-color2);
   text-decoration: underline;
 }
 
-a:hover {
-  color: var(--crazy-color3);
+.footerLink:hover {
+  color: var(--crazy-color1);
 }
+
 
 span.newWindow {
   vertical-align:super;  

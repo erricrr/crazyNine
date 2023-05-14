@@ -91,7 +91,7 @@ a:hover {
   color: var(--crazy-color3);
 }
 
-span#newWindow {
+span.newWindow {
   vertical-align:super;  
   font-size: x-small;
   
@@ -451,6 +451,10 @@ margin-left: 10px;
     left: 50%;  
   }
 
+}
+
+#footCopy {
+  padding-top: 20px;
 }
 
 

@@ -83,11 +83,12 @@ html{
 
 .footerLink {
   color: var(--crazy-color2);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footerLink:hover {
   color: var(--crazy-color1);
+  text-decoration: underline;
 }
 
 

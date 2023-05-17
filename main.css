@@ -375,7 +375,6 @@ textarea:focus, input:focus{
   color: var(--crazy-color1);
 
   cursor: default;
-  font-size: small;
 }
 
 .tooltip .tooltiptext {
